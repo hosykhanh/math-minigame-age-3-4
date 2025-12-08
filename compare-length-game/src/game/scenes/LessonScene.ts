@@ -539,6 +539,19 @@ export class LessonScene extends Phaser.Scene {
         }
     }
 
+    playRandomCorrect(sound: Phaser.Sound.BaseSoundManager) {
+        const keys = [
+            'correct_answer_1',
+            'correct_answer_2',
+            'correct_answer_3',
+            'correct_answer_4',
+        ];
+
+        const key = keys[Math.floor(Math.random() * keys.length)];
+        const sfx = sound.get(key) ?? sound.add(key);
+        sfx.play();
+    }
+
     // ===== Xử lý chọn đáp án =====
 
     private onSelect(
@@ -581,7 +594,7 @@ export class LessonScene extends Phaser.Scene {
         if (isCorrect) {
             this.score++;
             this.sound.play('correct');
-            this.sound.play('correct_answer');
+            this.playRandomCorrect(this.sound);
 
             // Panel đúng
             if (this.textures.exists(correctKey)) {

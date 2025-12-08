@@ -55,7 +55,10 @@ export class PreloadScene extends Phaser.Scene {
         this.load.audio('sfx-click', 'audio/sfx/click.ogg');
         this.load.audio('correct', 'audio/sfx/correct.ogg');
         this.load.audio('wrong', 'audio/sfx/wrong.ogg');
-        this.load.audio('correct_answer', 'audio/sfx/correct_answer.ogg');
+        this.load.audio('correct_answer_1', 'audio/sfx/correct_answer_1.ogg');
+        this.load.audio('correct_answer_2', 'audio/sfx/correct_answer_2.ogg');
+        this.load.audio('correct_answer_3', 'audio/sfx/correct_answer_3.ogg');
+        this.load.audio('correct_answer_4', 'audio/sfx/correct_answer_4.ogg');
 
         // === JSON BÀI HỌC ===
         // XÓA JSON CŨ TRƯỚC
