@@ -101,9 +101,12 @@ export class LessonScene extends Phaser.Scene {
                 align: 'center',
                 fontFamily: '"Baloo 2"',
                 fontStyle: '700',
-                // wordWrap: { width: GAME_WIDTH * 0.5 },
+                padding: {
+                    top: 10,
+                    bottom: 10,
+                },
             })
-            .setOrigin(0.5)
+            .setOrigin(0.5, 0.5)
             .setDepth(1); // chữ ở trên
 
         this.showQuestion();

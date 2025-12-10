@@ -10,6 +10,26 @@ declare global {
 
 const game = new Phaser.Game(gameConfig);
 
+function resizeGame() {
+    const gameDiv = document.getElementById('game-container');
+
+    const w = window.innerWidth;
+    const h = window.innerHeight;
+
+    if (gameDiv) {
+        gameDiv.style.transform = '';
+        gameDiv.style.width = `${w}px`;
+        gameDiv.style.height = `${h}px`;
+    }
+}
+
+window.addEventListener('resize', () => {
+    resizeGame();
+});
+window.addEventListener('orientationchange', () => {
+    resizeGame();
+});
+
 function updateUIButtonScale() {
     const container = document.getElementById('game-container')!;
     const resetBtn = document.getElementById('btn-reset') as HTMLImageElement;

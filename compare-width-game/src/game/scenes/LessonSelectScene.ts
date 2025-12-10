@@ -47,23 +47,23 @@ export class LessonSelectScene extends Phaser.Scene {
 
     preload() {
         if (!this.textures.exists('menu_panel')) {
-            this.load.image('menu_panel', 'assets/ui/menu_panel.webp'); // bảng xanh to
+            this.load.image('menu_panel', 'assets/ui/menu_panel.png'); // bảng xanh to
         }
 
         if (!this.textures.exists('diff_height')) {
-            this.load.image('diff_height', 'assets/ui/diff_height.webp');
+            this.load.image('diff_height', 'assets/ui/diff_height.png');
         }
         if (!this.textures.exists('diff_size')) {
-            this.load.image('diff_size', 'assets/ui/diff_size.webp');
+            this.load.image('diff_size', 'assets/ui/diff_size.png');
         }
         if (!this.textures.exists('diff_length')) {
-            this.load.image('diff_length', 'assets/ui/diff_length.webp');
+            this.load.image('diff_length', 'assets/ui/diff_length.png');
         }
         if (!this.textures.exists('diff_width')) {
-            this.load.image('diff_width', 'assets/ui/diff_width.webp');
+            this.load.image('diff_width', 'assets/ui/diff_width.png');
         }
 
-        this.load.audio('voice_rotate', 'audio/sfx/rotate.ogg');
+        this.load.audio('voice_rotate', 'audio/sfx/rotate.mp3');
     }
 
     create() {
