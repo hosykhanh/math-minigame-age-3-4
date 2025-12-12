@@ -553,6 +553,7 @@ export class LessonScene extends Phaser.Scene {
 
         if (isCorrect) {
             this.score++;
+            AudioManager.stopSound(this.currentPromptAudioKey || '');
             AudioManager.play('sfx-correct');
             AudioManager.playCorrectAnswer();
 
